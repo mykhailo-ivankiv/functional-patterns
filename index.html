@@ -1,13 +1,271 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="0">
+      <h2>"Мене звати Михайло, і я..."</h2>
+    </section>
 
-</body>
+    <section id="1">
+      <h2>"Я вмію розробляти великі складні проекти"</h2>
+    </section>
+
+    <section id="2">
+      <h2>
+        "Я вмію <b class="highlight">не</b> розробляти великі складні проекти"
+      </h2>
+    </section>
+
+    <section id="3">
+      <h2>Як?</h2>
+    </section>
+
+    <section id="4">
+      <q>
+        - Рядовой Іванов! <br />
+        - Я! <br />
+        - Подніміть танк! <br />
+        - Слухаюсь! <br />
+        (Корчиться, пихтить, намагається підняти, звісно - нічого не
+        виходить)<br />
+        - Не можу, товаришу прапорщик! <br />
+        - Ось! (повчально піднявши палець) Сорок тонн!<br />
+      </q>
+    </section>
+
+    <section id="5">
+      <h2>
+        Управління складністю - це вміння не робити того, що по своїй суті є
+        складним
+      </h2>
+    </section>
+
+    <section id="6">
+      <h2>Що вважати складним?</h2>
+    </section>
+
+    <section id="7">
+      <h2>"Добра бабуся"</h2>
+    </section>
+
+    <section id="8">
+      <h2>"Добра бабуся"</h2>
+      <q>Якщо фунція робить більше ніж одну дію -- це складно</q>
+    </section>
+
+    <section id="9">
+      <h2>Біологічні процеси</h2>
+    </section>
+
+    <section id="10">
+      <q style="display: block; text-align: center;">
+        <span style="color: red;">Увага!</span> <br />
+        Чи є тут Java програмісти?</q
+      >
+    </section>
+
+    <section id="11">
+      <h2>OOP - це зло.</h2>
+    </section>
+
+    <section id="12">
+      <h2>OOP - це <strike>зло</strike> складно.</h2>
+    </section>
+
+    <section id="13">
+      <h2>OOP - це <strike>зло</strike> складно.</h2>
+      <q>
+        Класи, наслідування, зміна стану.
+      </q>
+    </section>
+
+    <section id="14">
+      <p>
+        Візміть деталь типу <code class="highlight">A</code> вставте її в отвір
+        питу <code class="highlight">B</code> і повертайте за годинниковою
+        стрілкою до упору.
+      </p>
+      <p>
+        Повторіть дану дію зі всіма деталями типу
+        <code class="highlight">А</code> та отворами типу
+        <code class="highlight">B</code>
+      </p>
+    </section>
+
+    <section id="15">
+      <p>Закрутіть всі болти.</p>
+    </section>
+
+    <section id="16">
+      <p>
+        Описуйте <span class="highlight">що</span> зробити, а не
+        <span class="highlight">як</span> це зробити <br />
+      </p>
+    </section>
+
+    <section id="17">
+      <p>
+        Описуйте <span class="highlight">що</span> зробити, а не
+        <span class="highlight">як</span> це зробити <br />
+        <span style="color: #666; margin-left: 3rem; "
+          >&lt;декларативність&gt;</span
+        >
+        <span style="color: #666; margin-left: 3rem; "
+          >&lt;імперативність&gt;</span
+        >
+      </p>
+    </section>
+
+    <section id="18">
+      <p>
+        <code class="highlight">filter</code>,
+        <code class="highlight">map</code>,
+        <code class="highlight">reduce</code> замість
+        <code class="highlight">for</code> <br />
+      </p>
+    </section>
+
+    <section id="19">
+      <p>
+        <code class="highlight">рекурсія</code> замість
+        <code class="highlight">while</code>
+      </p>
+    </section>
+
+    <section id="20">
+      <h2>
+        Сортування злиттям (<a href="https://visualgo.net/en/sorting"
+          >Merge Sort</a
+        >)
+      </h2>
+    </section>
+
+    <section id="21">
+      <pre><code>
+const merge = (left, right) => {
+  var sortedArray = [];
+  let i = 0,
+    j = 0;
+  while (i < left.length && j < right.length) {
+    if (left[i] <= right[j]) {
+      sortedArray.push(left[i]);
+      i++;
+    } else {
+      sortedArray.push(right[j]);
+      j++;
+    }
+  }
+
+  while (i < left.length) {
+    sortedArray.push(left[i]);
+    i++;
+  }
+
+  while (j < right.length) {
+    sortedArray.push(right[j]);
+    j++;
+  }
+
+  return sortedArray;
+};
+
+const mergeSort = arr => {
+  if (arr.length <= 1) return arr;
+
+  const m = Math.floor(arr.length / 2);
+
+  let left = arr.slice(0, m);
+  let right = arr.slice(m, arr.length);
+
+  left = mergeSort(left);
+  right = mergeSort(right);
+
+  return merge(left, right);
+};
+    </code></pre>
+    </section>
+
+    <section id="22">
+      <pre><code>
+const { splitAt, map, length, min, head, tail } = require("ramda");
+
+const getMedian = x => Math.floor(x / 2);
+const splitByHalf = arr => splitAt(arr |> length |> getMedian, arr);
+
+const merge = ([left, right], sorted = []) => {
+  const a = head(left);
+  const b = head(right);
+  return a && b
+    ? merge(
+        a <= b ? [tail(left), right] : [left, tail(right)],
+        [...sorted, min(a, b)]
+      )
+    : [...sorted, ...left, ...right];
+};
+
+const mergeSort = arr =>
+  length(arr) <= 1 ? arr : arr |> splitByHalf |> map(mergeSort) |> merge;
+    </code></pre>
+    </section>
+
+    <section id="23">
+      <h2>Світ, курва, не ідеальний</h2>
+    </section>
+
+    <section id="24">
+      <pre style="font-size: 2rem"><code>
+"Mykhailo"
+  |> name => get (`/user/${name}`)
+  |> renderUser
+    </code></pre>
+    </section>
+
+    <section id="25">
+      <pre style="font-size: 2rem"><code>
+"Mykhailo"
+  |> name => get (`/user/${name}/<span class="highlight">friends</span>`)
+  |> <span class="highlight">map</span>(renderUser)
+    </code></pre>
+    </section>
+
+    <section id="26">
+      <pre style="font-size: 2rem"><code>
+"Mykhailo"
+  |> name => get (`/user/${name}/friends`)<span class="highlight">//null</span>
+  |> map(renderUser)
+    </code></pre>
+    </section>
+
+    <section id="27">
+      <pre style="font-size: 2rem"><code>
+Maybe.of("Mykhailo")
+  .map( name => get (`/user/${name}/friends`))
+  .map( map(renderUser))
+    </code></pre>
+    </section>
+
+    <script src="index.js"></script>
+    <script>
+      let pointer = Number(window.location.hash.slice(1));
+      document.body.addEventListener("keydown", ev => {
+        if (ev.key === "ArrowRight") {
+          pointer++;
+          window.location.hash = "" + pointer;
+        }
+        if (ev.key === "ArrowLeft") {
+          pointer--;
+          window.location.hash = "" + pointer;
+        }
+      });
+    </script>
+  </body>
 </html>
